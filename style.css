@@ -1,0 +1,1035 @@
+/* ------ GENERAL ------ */
+body {
+    /* position de la page */
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* ------ HEADER ------ */
+
+/* Bandeau fixé en haut et centré */
+#bandeau {
+    display: flex;
+    position: fixed;
+    /* header toujours visible */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background: white;
+    z-index: 10;
+}
+
+/* Logo aligné et fixation de sa taille */
+#logo {
+    display: flex;
+    width: 230px;
+    margin: 10%;
+}
+
+/* Caché en page web normal */
+.menu_toggle {
+    display: none;
+}
+
+/* Caché en page web normal */
+#toggle {
+    display: none;
+}
+
+/* Position du menu */
+#menu {
+    margin-right: 10%;
+}
+
+/* Aligné la liste et enlever les styles par défaut */
+#menu ul {
+    display: flex;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/* Espace entre les liens */
+#menu li {
+    margin: 10px;
+}
+
+/* enlever les styles par défaut*/
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-family: 'roboto-light', Arial, sans-serif;
+}
+
+/* Apparition d'une barre en haut et changement de la police au survol */
+#menu a:hover {
+    border-top: solid 3px #3491b2;
+    padding-top: 20px;
+    font-family: 'roboto-medium', Arial, sans-serif;
+}
+
+/* ------ EN-TETE ------ */
+
+/* Position de l'en-tête */
+#en-tete {
+    position: relative;
+    padding-top: 90px;
+    width: 100%;
+}
+
+/* Enlever les marges */
+.image {
+    margin: auto;
+}
+
+/* Image prenne toute la place */
+.image_slide {
+    width: 100%;
+    height: auto;
+}
+
+/* Position et caractéristiques du texte */
+#accueil figcaption {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 60%;
+    height: 70%;
+    color: white;
+}
+
+/* Réglages du h1 */
+#accueil figcaption h1 {
+    font-family: 'roboto-bold', Arial, serif;
+    color: white;
+    font-size: 34px;
+    margin-bottom: -5px;
+}
+
+/* Réglages du WebAgency */
+#accueil strong {
+    color: #40aad1;
+}
+
+/* Réglages du h3 */
+#accueil h3 {
+    font-family: 'roboto-regular', Arial, sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+/* Réglages du bouton */
+#accueil .bouton1 {
+    display: block;
+    width: 110px;
+    height: 35px;
+    background: #3dadd6;
+    color: white;
+    font-size: 16px;
+    font-family: 'roboto-regular', Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    line-height: 35px;
+    padding: 5px 5px;
+    margin: 10px 0;
+    box-shadow: 2px 3px #3491b2;
+}
+
+/* Réglages du bouton au survol */
+#accueil .bouton1:hover {
+    opacity: 0.9;
+}
+
+/* Position du texte d'intro 1 */
+#texte1 {
+    position: absolute;
+    top: 40%;
+    left: 11%;
+}
+
+/* Réglages de la timeline */
+.timeline {
+    position: absolute;
+    background-color: #40aad1;
+    width: 30%;
+    height: 5px;
+    bottom: 4px;
+    z-index: 2;
+}
+
+.timeline2 {
+    position: absolute;
+    background-color: silver;
+    width: 100%;
+    height: 5px;
+    bottom: 4px;
+    z-index: 1;
+}
+
+/* Animation des images */
+/* Règles de l'animation "glisse" 
+@keyframes glisse {
+    0% {
+        margin-left: 0;
+    }
+
+    33% {
+        margin-left: 0;
+    }
+
+    66% {
+        margin-left: -100%;
+    }
+
+    100% {
+        margin-left: -100%;
+    }
+}*/
+
+/* Target des commandes du slider */
+#en-tete span {
+    display: none;
+    /* N'affiche pas l'ancre */
+}
+
+/* Réglages des comandes */
+.commandes {
+    display: block;
+    /* transforme les commandes en boutons */
+    width: 65px;
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    line-height: 65px;
+    font-size: 1.1em;
+}
+
+/* Position des boutons + arrondie des bordures */
+.left {
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    border-radius: 0 50% 50% 0;
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: -35px;
+    border-radius: 50% 0 0 50%;
+}
+
+/* Position des chevrons dans le bouton */
+.fa-chevron-left {
+    position: relative;
+    left: 20%;
+}
+
+.fa-chevron-right {
+    position: relative;
+    right: 20%;
+}
+
+/* Actions des boutons  ======> NE FONCTIONNE PAS POUR L'INSTANT ????
+#sl_right:target ~ #en-tete {
+    margin-left: -100%;
+}
+
+#sl_left:target ~ #en-tete {
+    margin-left: 0;
+}*/
+
+/* ------ ICONE DE SEPARATION ------ */
+
+/* Icône du cercle de l'interligne */
+.fa-circle {
+    position: relative;
+    bottom: 21px;
+    color: rgb(92, 173, 211);
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+/* Ligne grise de l'interligne */
+.petit_hr {
+    width: 150px;
+    border: 1px solid silver;
+}
+
+/* ------ NOS SERVICES ------ */
+
+/* Position de services */
+#service {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* ------ Réglage du conteneur ------ */
+
+/* Réglages du h2 */
+#service h2 {
+    padding-top: 60px;
+    font-family: 'roboto-bold', Arial, serif;
+    font-size: 38px;
+}
+
+/* Réglages du p1 */
+#service .p1 {
+    margin-top: -10px;
+    margin-bottom: 40px;
+    font-family: 'roboto-light', Arial, serif;
+    font-size: 16px;
+}
+
+/* Changement de police du strong */
+#service strong {
+    font-family: 'roboto-medium', Arial, serif;
+}
+
+/* ------ Réglage du conteneur seconde partie ------ */
+
+/* Position de l'image */
+#service .feature {
+    display: flex;
+}
+
+/* Taille de l'image */
+#service figure {
+    width: 50%;
+}
+
+/* Taille du texte */
+#service .service {
+    width: 50%;
+    padding-top: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 344px;
+}
+
+/* Position du texte et icones */
+.design {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+}
+
+/* Placement et police du h4 */
+#service h4 {
+    margin-left: 80px;
+    padding-top: 10px;
+    font-family: 'roboto-bold', Arial, serif;
+    font-size: 20px;
+
+}
+
+/* Placement et police du p2 */
+#service .p2 {
+    margin-left: 80px;
+    margin-top: -30px;
+    font-family: 'roboto-light', Arial, serif;
+    font-size: 14px;
+}
+
+/* Position des icones des descriptions */
+.icones {
+    position: relative;
+    bottom: 75px;
+    right: 5px;
+    color: #40aad1;
+}
+
+/* Mise en page des icones */
+.fa-chart-line,
+.fa-cubes,
+.fa-chart-pie {
+    font-size: 1.7em;
+    padding: 15px;
+    border: 2px solid #ebebeb;
+    /* cercle de l'icone */
+    border-radius: 50%;
+}
+
+/* Taille de l'icone "camembert" */
+.fa-chart-pie {
+    height: 24px;
+    width: 24.5px;
+}
+
+/* Mise en page du petit cercle bleu */
+.icones .fa-circle {
+    position: relative;
+    bottom: 7px;
+    right: 12px;
+    border: 4px solid white;
+    border-radius: 50%;
+    font-size: 0.8em;
+}
+
+
+/* ------ NOS PROJETS ------ */
+
+/* Position de projets */
+#projet {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+/* Réglages du h2 */
+#projet h2 {
+    padding-top: 60px;
+    font-family: 'roboto-bold', Arial, serif;
+    font-size: 38px;
+}
+
+/* Réglages du p1 */
+#projet .p1 {
+    margin-top: -10px;
+    margin-bottom: 40px;
+    font-family: 'roboto-light', Arial, serif;
+    font-size: 16px;
+}
+
+/* Réglages du nav */
+#projet nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* Mise en page du nav */
+#projet ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+}
+
+/* Taille des cases*/
+#projet li {
+    width: 100px;
+    height: 40px;
+    margin: 0;
+}
+
+/* Transforme le premier liens en boutons + mise en page */
+#projet .boutonBleu {
+    display: block;
+    text-decoration: none;
+    font-family: 'roboto-light', Arial, sans-serif;
+    background: #3dadd6;
+    font-family: 'roboto-medium', Arial, sans-serif;
+    color: white;
+    border-bottom: solid #2a8cb0 3px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+/* Placement de la flèche */
+#projet .boutonBleu .fa-caret-down {
+    position: relative;
+    bottom: 13px;
+    color: #2a8cb0;
+    font-size: 1.2em;
+}
+
+/* Transforme les liens en boutons + mise en page pour les 3 derniers boutons */
+#projet .boutonAutre {
+    display: block;
+    text-decoration: none;
+    font-family: 'roboto-light', Arial, sans-serif;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+    /* pour centrage vertical */
+
+}
+
+/* Mise en page de la flèche du bas + cacher */
+#projet .boutonAutre .fa-caret-down {
+    visibility: hidden;
+    /* position */
+    position: relative;
+    bottom: 13px;
+    color: #2a8cb0;
+    font-size: 1.2em;
+}
+
+/* Mise en page des boutons au survol de la souris */
+#projet .boutonAutre:hover {
+    width: 100%;
+    height: 100%;
+    background: #3dadd6;
+    font-family: 'roboto-medium', Arial, sans-serif;
+    color: white;
+    border-bottom: solid #2a8cb0 3px;
+    border-radius: 5px;
+}
+
+/* Fais apparaître la fléche */
+#projet a:hover .fa-caret-down {
+    visibility: visible;
+}
+
+/* Partie portfolio */
+#projet .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Taille et marge des images */
+#projet .row .item {
+    width: 22%;
+    margin: 10px;
+}
+
+#projet .row img {
+    width: 100%;
+}
+
+
+/* Mise en page des legendes des images + cache */
+.legende {
+    visibility: hidden;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    bottom: 85px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Affichage de la légende au survol de l'image */
+figure:hover figcaption {
+    visibility: visible;
+}
+
+/* Mise en page du texte des légendes */
+#projet h4 {
+    margin: 0;
+    padding: 15px 15px 5px 15px;
+    font-family: 'roboto-medium', Arial, sans-serif;
+}
+
+#projet p {
+
+    margin: 0;
+    padding: 0px 15px 0 15px;
+    font-size: 12px;
+    font-family: 'roboto-light', Arial, sans-serif;
+}
+
+/* Mise en page de l'icone "oeil" */
+.fa-eye {
+    position: relative;
+    bottom: 70px;
+    left: 80%;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: rgb(92, 173, 211);
+    text-align: center;
+    color: white;
+    font-size: 0.9em
+}
+
+
+/* ------CONTACT ------ */
+
+/* Position de projets */
+footer {
+    position: relative;
+    height: 720px;
+}
+
+/* Taille de la map prend tout l'écran */
+#contact iframe {
+    width: 100%;
+}
+
+/* positionnement d'un voile bleu sur la map */
+.voile_bleu {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 720px;
+    background-color: rgba(92, 173, 211, 0.3);
+}
+
+/* Réglage de la position et de la forme du formulaire */
+footer .champs {
+    background: rgba(220, 220, 220, 0.7);
+    position: relative;
+    z-index: 3;
+    width: 25%;
+    padding: 20px;
+    float: right;
+    margin: 80px;
+    margin-top: -650px;
+    border: 0;
+}
+
+/* Caché la légende du formulaire */
+.champs legend {
+    display: none;
+    font-family: 'roboto-medium', Arial, sans-serif;
+    color: black;
+    font-size: 24px;
+}
+
+/* Réglages des textes */
+footer h3 {
+    font-family: 'roboto-medium', Arial, sans-serif;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+footer h5 {
+    font-family: 'roboto-regular', Arial, sans-serif;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-family: 'roboto-light', Arial, sans-serif;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Réglages zone d'écriture formulaire */
+input,
+textarea {
+    width: 95%;
+    height: 10px;
+    margin: 5px 0;
+    font-family: 'roboto-light', Arial, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Taille du message */
+textarea {
+    height: 200px;
+    border: none;
+}
+
+/* Réglages du bouton submit */
+footer .bouton1 {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background: #3dadd6;
+    color: white;
+    font-size: 16px;
+    font-family: 'roboto-regular', Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    line-height: 15px;
+    padding: 5px 5px;
+    box-shadow: 2px 3px #3491b2;
+}
+
+/* ------------ Règles pour les écrans de largeur max 1280 px ------------ */
+@media screen and (max-width: 1280px) {
+    /* ------------ EN-TETE ------------ */
+
+    /* Ajustement position et taille du texte du slider */
+    #accueil figcaption h1 {
+        font-size: 26px;
+    }
+
+    #accueil figcaption h3 {
+        font-size: 14px;
+    }
+
+    #accueil .bouton1 {
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+}
+
+/* ------------ Règles pour les écrans de largeur max 1280 px ------------ */
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    /* ------------ NOS PROJETS ------------ */
+
+    /* Ajustement position et taille du texte du portfolio */
+    #projet h4 {
+        font-size: 14px;
+    }
+
+    #projet p {
+        font-size: 10px;
+    }
+
+    .legende {
+
+        height: 65px;
+        bottom: 70px;
+
+    }
+
+    /* ------------ CONTACT ------------ */
+    /* Augmentation taille du champs */
+    footer .champs {
+        width: 30%;
+    }
+}
+
+/* ------------ Règles pour les écrans de largeur max 720 px ------------ */
+
+@media screen and (max-width: 720px) {
+
+    /* ------------ HEADER ------------ */
+
+    /* Caractéristiques du bouton de navigation */
+    .menu_toggle {
+        position: relative;
+        right: -40%;
+        margin-top: 10px;
+        display: block;
+        cursor: pointer;
+        width: 40px;
+        font-size: 3em;
+        text-align: center;
+        color: #40aad1;
+    }
+
+    /* Affichage du menu en cliquant sur le bouton */
+    #toggle:checked + .menu_nav {
+        display: block;
+    }
+
+    /* Caractéristique du menu navigation */
+    #menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        width: 35%;
+    }
+
+    /* Mise en page des liens dans le menu navigation */
+    #menu ul {
+        display: none;
+        margin: 0;
+        text-align: center;
+        background: white;
+        opacity: 0.9;
+    }
+
+    /* Espacement des liens entre eux */
+    #menu li {
+        margin: 0;
+        padding: 8px;
+    }
+
+    /* Affichage au survol de la souris */
+    #menu a:hover {
+        /* effacement de l'ancien effet */
+        border-top: 0;
+        padding-top: 0;
+        background-color: #40aad1;
+        color: white;
+    }
+
+    /* Transforme les liens en bouton */
+    #menu a {
+        display: block;
+    }
+ #logo {
+        width: 100px;
+    }
+
+    /* ------------ EN-TETE ------------ */
+
+    /* Changement taille des polices */
+    #accueil figcaption h1 {
+        font-size: 20px;
+        color: white;
+    }
+
+    /* Cache le texte */
+    #accueil figcaption h3 {
+        display: none;
+    }
+
+    /* Diminution du bouton */
+    #accueil .bouton1 {
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+    }
+
+    /* ------------ NOS SERVICES ------------ */
+
+    /* Ajustement police p1 */
+    #service .p1 {
+        font-size: 14px;
+    }
+
+    /* Mettre l'image et le texte l'un au dessus de l'autre */
+    #service .feature {
+        flex-direction: column;
+    }
+
+    /* Ajustement police p2 */
+    #service .p2 {
+        font-size: 12px;
+    }
+
+    /* Texte prend toute la place */
+    #service figure {
+        width: 100%;
+    }
+
+    /* Ajustement police */
+    #service .service {
+        margin-top: -100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* ------------ NOS PROJETS ------------ */
+    /* Mettre en colonne les images */
+    #projet .row {
+        flex-direction: column;
+    }
+
+    /* Redimensionner et centrer les images  */
+    #projet .row .item {
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: -50px;
+    }
+
+    /* Ajustement police */
+    #projet h4 {
+        font-size: 22px;
+    }
+
+    #projet p {
+        font-size: 14px;
+    }
+
+    /* Repositinnement du cadre */
+    .legende {
+        height: 90px;
+        bottom: 95px;
+    }
+
+    /* Repositionnement de l'icone */
+    .fa-eye {
+        font-size: 1em;
+        bottom: 80px;
+        left: 80%;
+    }
+
+    /* ------------ CONTACT ------------ */
+    /* Augmentation taille du champs + opacité */
+    footer .champs {
+        width: 50%;
+        background: rgba(220, 220, 220, 0.9);
+    }
+
+
+    /* Diminution de la marge haute */
+    footer h3 {
+        margin-top: -10px;
+    }
+}
+
+/* ------------ Règles pour les écrans de largeur max 480 px ------------ */
+
+@media screen and (max-width: 540px) {
+
+    /* ------------ HEADER ------------ */
+    /* Diminution du logo */
+   
+    /* ------------ EN-TETE ------------ */
+    /* Taille de l'accueil */
+    #accueil {
+        height: 300px; 
+    }
+
+    /* Cache les images */
+    .image_slide,
+    .timeline,
+    .timeline2,
+    .commandes {
+        visibility: hidden;
+    }
+
+    /* Remet le texte  */
+    #accueil figcaption h3 {
+        display: flex;
+        color: gray;
+    }
+
+    /* Centre et prend toute la place pour le texte */
+    #accueil figcaption {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Ajustement taille h4 */
+    #accueil figcaption h1 {
+        font-size: 34px;
+        color: black;
+    }
+
+    /* Centre le bouton */
+    #accueil .bouton1 {
+        text-align: center;
+    }
+
+    /* ------------ NOS SERVICES ------------ */
+    /* Enlève l'image */
+    #service figure {
+        display: none;
+    }
+
+    /* Enlève les icones */
+    #service .icones {
+        display: none;
+    }
+
+    /* Ajustement des polices */
+    #service .p2 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #service h4 {
+        margin: 0 auto;
+    }
+
+    /* ------------ NOS PROJETS ------------ */
+    /* Diminution polices du bouton */
+    #projet .boutonAutre,
+    #projet .boutonBleu {
+        font-size: 12px;
+    }
+
+    /* Diminution du bouton */
+    #projet li {
+        width: 60px;
+    }
+
+    /* Diminution des légendes */
+    #projet .legende h4 {
+        font-size: 16px;
+    }
+    figure:hover figcaption {
+    visibility: hidden;
+}
+    
+    /* ------------ CONTACT ------------ */
+    #contact iframe {
+    visibility: hidden;
+}
+
+}
+/* DECLARATION DES POLICES */
+
+/* ROBOTO */
+@font-face {
+    font-family: 'roboto-black';
+    src: url('fonts/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-black-italic';
+    src: url('fonts/Roboto-BlackItalic.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url('fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-bold-italic';
+    src: url('fonts/Roboto-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-italic';
+    src: url('fonts/Roboto-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-light';
+    src: url('fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-light-italic';
+    src: url('fonts/Roboto-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-medium';
+    src: url('fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-medium-italic';
+    src: url('fonts/Roboto-MediumItalic.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-thin';
+    src: url('fonts/Roboto-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-thin-italic';
+    src: url('fonts/Roboto-ThinItalic.ttf');
+}
